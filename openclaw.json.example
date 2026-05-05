@@ -1,0 +1,97 @@
+{
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "ollama/qwen2.5:3b"
+      },
+      "models": {},
+      "workspace": "/path/to/your/workspace"
+    }
+  },
+  "auth": {
+    "profiles": {}
+  },
+  "channels": {
+    "whatsapp": {
+      "allowFrom": [],
+      "dmPolicy": "allowlist",
+      "enabled": false,
+      "selfChatMode": false
+    }
+  },
+  "gateway": {
+    "auth": {
+      "mode": "token",
+      "token": "replace-with-a-random-secret-token"
+    },
+    "bind": "loopback",
+    "controlUi": {
+      "allowInsecureAuth": true
+    },
+    "mode": "local",
+    "port": 18789,
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "models": {
+    "providers": {
+      "ollama": {
+        "api": "ollama",
+        "apiKey": "ollama-local",
+        "baseUrl": "http://127.0.0.1:11434",
+        "models": [
+          {
+            "contextWindow": 32768,
+            "cost": {
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "input": 0,
+              "output": 0
+            },
+            "id": "qwen2.5:3b",
+            "input": ["text", "image"],
+            "name": "qwen2.5:3b",
+            "reasoning": false
+          }
+        ]
+      }
+    }
+  },
+  "plugins": {
+    "allow": ["openclaw-web-search"],
+    "entries": {
+      "openclaw-web-search": {
+        "enabled": true
+      },
+      "google": {
+        "config": {
+          "webSearch": {
+            "apiKey": "your-google-custom-search-api-key"
+          }
+        },
+        "enabled": false
+      }
+    }
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "tools": {
+    "profile": "coding",
+    "web": {
+      "fetch": {
+        "enabled": false
+      },
+      "search": {
+        "enabled": false
+      }
+    }
+  }
+}

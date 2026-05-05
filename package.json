@@ -1,0 +1,15 @@
+{
+  "name": "openclaw-pipeline",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "npx tsx --env-file=.env index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.103.3"
+  }
+}
