@@ -4,7 +4,7 @@
     "google:default": {
       "type": "api_key",
       "provider": "google",
-      "key": "AIzaSyAbyxy2OWl6VrjTvPBv8Vd4vXXLtY_B31s"
+      "key": "Google AI Studio API Key"
     }
   },
   "lastGood": {
