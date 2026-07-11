@@ -60,7 +60,7 @@ Optional:
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/openclaw-pipeline.git
+git clone https://github.com/SubhobrataMaity/OpenClaw.git
 cd openclaw-pipeline
 ```
 
